@@ -1,0 +1,3 @@
+#!/bin/bash
+read -p "Enter IP address to scan: " ip 
+curl ipinfo.io/$ip
