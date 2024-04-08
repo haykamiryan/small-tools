@@ -1,0 +1,23 @@
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  // Log the incoming request
+  console.log(`Incoming Request: ${req.method} ${req.url}`);
+
+  // Set response headers
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  // Write response
+  res.write('Hello World\n');
+  
+  // End response
+  res.end();
+  
+  // Log the outgoing response
+  console.log(`Outgoing Response: ${res.statusCode}`);
+});
+
+// Server listens on port 443
+server.listen(443, '44.226.145.213', () => {
+  console.log('Server is running');
+});
